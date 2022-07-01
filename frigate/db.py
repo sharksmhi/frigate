@@ -13,7 +13,7 @@ import pandas as pd
 
 def get_db_conn(db_path=None):
     """Return database connection."""
-    if Path(str(db_path)).is_dir():
+    if Path(str(db_path)).is_file():
         return sqlite3.connect(db_path)
     else:
         raise FileNotFoundError(
