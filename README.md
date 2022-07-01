@@ -1,2 +1,2 @@
-# frigate
-FRIGATE - FilteRInG dATabasE
+# FRIGATE - FilteRInG dATabasE
+
