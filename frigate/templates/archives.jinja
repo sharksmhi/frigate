@@ -1,0 +1,16 @@
+select {{select_statement}}
+    {{field}}
+from
+    {{table}}
+where
+    1=1
+    {% if in_list_params %}
+        {% for key, list in in_list_params.items() %}
+            and {{key}} in ( {{ "'" + "','".join(list) + "'" }} )
+        {% endfor %}
+    {% endif %}
+    {% if not_in_list_params %}
+        {% for key, list in not_in_list_params.items() %}
+            and {{key}} not in ( {{ "'" + "','".join(list) + "'" }} )
+        {% endfor %}
+    {% endif %}

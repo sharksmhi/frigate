@@ -1,2 +1,0 @@
-# FRIGATE - FilteRInG dATabasE
-

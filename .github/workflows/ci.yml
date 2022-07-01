@@ -1,0 +1,12 @@
+name: CI
+
+on: [push, pull_request]
+
+jobs:
+  lint:
+    name: lint and style checks
+    runs-on: windows-latest
+    steps:
+      - name: Run linting
+        run: |
+          flake8 frigate/ --ignore D400
