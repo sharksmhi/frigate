@@ -5,7 +5,7 @@ FRIGATE - Filtering database
 -----------------
 - Extract information from database, eg. from the Physical&Chemical SHARK log.
 - Implementing Jinja2 templating for SQL querying (https://jinja.palletsprojects.com/en/3.0.x/api/).
-- See examples on use cases under `tests <https://github.com/sharksmhi/frigate/frigate/tests>`_.
+- See `examples <https://github.com/sharksmhi/frigate/frigate/tests>`_ on use cases.
 
 💻 Installation - Getting started
 ---------------------
