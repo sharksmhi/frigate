@@ -19,15 +19,11 @@ class FilterOptions:
     ship: Optional[list] = None
     year: Optional[list] = None
     serno: Optional[list] = None
+    seqno: Optional[list] = None
     proj: Optional[list] = None
     not_proj: Optional[list] = None
     orderer: Optional[list] = None
     not_orderer: Optional[list] = None
-
-    @staticmethod
-    def get_intervals(x1, x2):
-        """Return list of all numbers between a given start and end value."""
-        return list(map(str, range(int(x1), int(x2) + 1)))
 
     def get_list(self, value_list, key=None):
         """Return list of all filter values."""
@@ -46,6 +42,11 @@ class FilterOptions:
         if 'serno' in key:
             _list = [x.zfill(4) for x in _list]
         return _list
+
+    @staticmethod
+    def get_intervals(x1, x2):
+        """Return list of all numbers between a given start and end value."""
+        return list(map(str, range(int(x1), int(x2) + 1)))
 
     @cached_property
     def in_list_filter(self):
