@@ -23,12 +23,12 @@ if __name__ == '__main__':
     )
     df = get_data(
         db_path=str(Path(__file__).parent.joinpath('test_db/sharklog.db')),
-        template_name='archives.jinja',
+        template_name='tmp_archives.jinja',
         filter_obj=filter_opt,
-        # template_kwargs=dict(
-        #     table='sharkintlog',
-        #     select_statement='distinct',
-        #     field='archive_name'
-        # )
+        template_kwargs=dict(
+            table='sharkintlog',
+            select_statement='distinct',
+            field='archive_name'
+        )
     )
     print(df)
