@@ -38,6 +38,7 @@ def get_data(db_path=None, template=None, template_name=None, filter_obj=None,
         template_kwargs (dict): Arguments to pass on template rendering.
     """
     template = template or get_template(template_name)
+    template_kwargs = template_kwargs or {}
     query = template.render(
         **template_kwargs,
         in_list_params=filter_obj.in_list_filter,
