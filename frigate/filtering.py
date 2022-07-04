@@ -19,6 +19,7 @@ class FilterOptions:
     ship: Optional[list] = None
     year: Optional[list] = None
     serno: Optional[list] = None
+    seqno: Optional[list] = None
     proj: Optional[list] = None
     not_proj: Optional[list] = None
     orderer: Optional[list] = None

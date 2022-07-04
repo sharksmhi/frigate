@@ -7,15 +7,15 @@ Created on 2022-07-01 13:10
 @author: johannes
 """
 from .db import get_dataframe
-from .filtering import FilterOptions  # noqa: F401, F403
+from .filtering import FilterOptions  # noqa: F401
 
 from pathlib import Path
 from jinja2 import FileSystemLoader, Environment
 
 
-templateLoader = FileSystemLoader(
+_template_loader = FileSystemLoader(
     searchpath=Path(__file__).parent.joinpath('templates'))
-TEMPLATES = Environment(loader=templateLoader)
+TEMPLATES = Environment(loader=_template_loader)
 
 
 def get_template(tmp_file):
